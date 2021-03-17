@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.IndovinaNumero.FXMLController">
+   <top>
+      <Label text="INDOVINA IL NUMERO DA 1 A 100" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Button fx:id="bpmNoovaPartita" mnemonicParsing="false" onAction="#doNuovaPartita" text="Nuova Partita">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="Tentativi Rimasti">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtTentativi" editable="false">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <ProgressBar fx:id="btnProgressBar" maxHeight="10.0" prefWidth="161.0" progress="0.0">
+               <VBox.margin>
+                  <Insets left="231.0" />
+               </VBox.margin>
+            </ProgressBar>
+            <HBox fx:id="layoutTentativo" disable="true">
+               <children>
+                  <TextField fx:id="txtTentativoUtente">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btmProva" mnemonicParsing="false" onAction="#doTentativo" text="Prova" textAlignment="JUSTIFY">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnAbbandonaPartita" mnemonicParsing="false" onAction="#doAbbandonaPartita" text="Abbandona Partita" textFill="#f00707">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextArea fx:id="txtRisultato" editable="false" prefHeight="100.0" prefWidth="180.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
